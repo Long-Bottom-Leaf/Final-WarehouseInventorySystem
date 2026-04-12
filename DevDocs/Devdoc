@@ -1,0 +1,19 @@
+database layer, service layer, controller/api layer, repository layer, datastructure layer (BST)
+
+What needs to be done (not in order)
+
+1. Fix BST
+
+2. Fix Sorting Algo
+
+3. Build Proper Service Layer
+
+4. Finish Controller
+
+5. Set Up JPA Relationships
+
+6. Connect BST to API
+
+7. JUnit tests
+
+Tables and Relationships described in project
