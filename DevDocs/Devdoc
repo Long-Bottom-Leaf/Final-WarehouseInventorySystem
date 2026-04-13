@@ -16,4 +16,10 @@ What needs to be done (not in order)
 
 7. JUnit tests
 
+8. Models and any other basic requirements (dependencies etc)
+
 Tables and Relationships described in project
+
+Models:
+
+Product, Customer, Order, Order Item
