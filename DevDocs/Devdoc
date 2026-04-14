@@ -20,6 +20,12 @@ What needs to be done (not in order)
 
 Tables and Relationships described in project
 
-Models:
+Models and Repositories:
 
 Product, Customer, Order, Order Item
+
+Services and Controllers:
+
+Customer, Order, Product
+
+Theory Questions and Video
