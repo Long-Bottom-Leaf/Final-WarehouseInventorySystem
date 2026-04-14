@@ -14,9 +14,9 @@ import java.time.LocalDate;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
-    private LocalDate localDate;
+    private LocalDate orderDate;
     private int priorityLevel;
 
     @ManyToOne
