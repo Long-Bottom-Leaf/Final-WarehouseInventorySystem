@@ -42,7 +42,7 @@ public class OrderService {
     }
 
     public List<Order> getOrdersInPriorityOrder() {
-        return orderBST.inorder();
+        return orderBST.inOrder();
     }
 
     public Order getOrderById(Long id) {

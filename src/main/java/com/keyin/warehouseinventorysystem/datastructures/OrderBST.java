@@ -28,7 +28,7 @@ public class OrderBST {
         return current;
     }
 
-    public List<Order> inorder() {
+    public List<Order> inOrder() {
         List<Order> result = new ArrayList<>();
         inorderRecursive(root, result);
 
