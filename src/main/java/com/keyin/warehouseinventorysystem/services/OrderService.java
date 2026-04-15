@@ -1,5 +1,6 @@
 package com.keyin.warehouseinventorysystem.services;
 
+import com.keyin.warehouseinventorysystem.datastructures.OrderBST;
 import com.keyin.warehouseinventorysystem.models.Order;
 import com.keyin.warehouseinventorysystem.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ public class OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
+
+    private OrderBST orderBST = new OrderBST();
 
     public Order createOrder(Order order) {
         if (order.getOrderDate() == null) {
@@ -32,5 +35,21 @@ public class OrderService {
 
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
+    }
+
+    public void addToPriorityTree(Order order) {
+        orderBST.insert(order);
+    }
+
+    public List<Order> getOrdersInPriorityOrder() {
+        return orderBST.inorder();
+    }
+
+    public Order getHighestPriority() {
+        return orderBST.findHighest();
+    }
+
+    public Order getLowestPriority() {
+        return orderBST.findLowest();
     }
 }

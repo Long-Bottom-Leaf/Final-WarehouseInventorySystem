@@ -56,7 +56,7 @@ public class OrderBST {
         return current.data;
     }
 
-    public Order findLowers() {
+    public Order findLowest() {
         if (root == null) return null;
 
         OrderNode current = root;
