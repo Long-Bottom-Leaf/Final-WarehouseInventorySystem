@@ -50,11 +50,19 @@ public class OrderService {
                 .orElseThrow(() -> new RuntimeException("Order not found"));
     }
 
-    public Order getHighestPriority() {
+    public Order getHighestPriorityOrder() {
+        if (orderBST.findHighest() == null) {
+            throw new RuntimeException("No orders in priority tree");
+        }
+
         return orderBST.findHighest();
     }
 
-    public Order getLowestPriority() {
+    public Order getLowestPriorityOrder() {
+        if (orderBST.findLowest() == null) {
+            throw new RuntimeException("No orders in priority tree");
+        }
+
         return orderBST.findLowest();
     }
 }

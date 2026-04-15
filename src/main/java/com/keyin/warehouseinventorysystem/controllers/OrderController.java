@@ -45,11 +45,11 @@ public class OrderController {
 
     @GetMapping("/priority/highest")
     public Order getHighestPriorityOrder() {
-        return orderService.getHighestPriority();
+        return orderService.getHighestPriorityOrder();
     }
 
     @GetMapping("/priority/lowest")
     public Order getLowestPriorityOrder() {
-        return orderService.getLowestPriority();
+        return orderService.getLowestPriorityOrder();
     }
 }
