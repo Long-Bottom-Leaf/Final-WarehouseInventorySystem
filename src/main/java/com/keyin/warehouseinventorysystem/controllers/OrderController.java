@@ -28,11 +28,6 @@ public class OrderController {
     public String addToPriorityTree(@PathVariable Long id) {
 
         Order order = orderService.getOrderById(id);
-
-        if (order == null) {
-            throw new RuntimeException("Order not found");
-        }
-
         orderService.addToPriorityTree(order);
 
         return "Order with ID " + id + " added to priority tree";

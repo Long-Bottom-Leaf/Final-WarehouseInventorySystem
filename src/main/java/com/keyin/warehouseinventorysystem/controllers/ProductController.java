@@ -29,7 +29,10 @@ public class ProductController {
 
         List<Product> products = productService.getAllProducts();
 
-        if (by.equalsIgnoreCase("price")) {
+        if (by == null) {
+            throw new RuntimeException("Sort parameter 'by' is required");
+
+        } else if (by.equalsIgnoreCase("price")) {
             return productService.sortByPrice(products);
 
         } else if (by.equalsIgnoreCase("stock")) {
