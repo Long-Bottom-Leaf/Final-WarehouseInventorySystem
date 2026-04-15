@@ -48,4 +48,8 @@ public class ProductService {
 
         return products;
     }
+
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
+    }
 }

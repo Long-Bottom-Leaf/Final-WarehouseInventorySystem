@@ -45,6 +45,11 @@ public class OrderService {
         return orderBST.inorder();
     }
 
+    public Order getOrderById(Long id) {
+        return orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+    }
+
     public Order getHighestPriority() {
         return orderBST.findHighest();
     }
