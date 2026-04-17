@@ -32,4 +32,43 @@ public class ProductServiceTest {
         assertEquals("Keyboard", sorted.get(1).getName());
         assertEquals("Laptop", sorted.get(2).getName());
     }
+
+    @Test
+    public void testReverseOrder() {
+        List<Product> products = new ArrayList<>();
+
+        products.add(new Product(1L, "A", 300, 5));
+        products.add(new Product(2L, "B", 200, 5));
+        products.add(new Product(3L, "C", 100, 5));
+
+        List<Product> sorted = productService.sortByPrice(products);
+
+        assertEquals(100, sorted.get(0).getPrice());
+        assertEquals(200, sorted.get(1).getPrice());
+        assertEquals(300, sorted.get(2).getPrice());
+    }
+
+    @Test
+    public void testDuplicatePrices() {
+        List<Product> products = new ArrayList<>();
+
+        products.add(new Product(1L, "A", 50, 5));
+        products.add(new Product(2L, "B", 50, 5));
+        products.add(new Product(3L, "C", 10, 5));
+
+        List<Product> sorted = productService.sortByPrice(products);
+
+        assertEquals(10, sorted.get(0).getPrice());
+        assertEquals(50, sorted.get(1).getPrice());
+        assertEquals(50, sorted.get(2).getPrice());
+    }
+
+    @Test
+    public void testSortEmptyList() {
+        List<Product> products = new ArrayList<>();
+
+        List<Product> sorted = productService.sortByPrice(products);
+
+        assertEquals(0, sorted.size());
+    }
 }

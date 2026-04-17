@@ -17,7 +17,7 @@ public class OrderServiceTest {
     private OrderService orderService;
 
     @Test
-    public void testPriorityValidation() {
+    public void testPriorityValidationThrowsException() {
 
         Order order = new Order();
         order.setPriorityLevel(999); // invalid
@@ -26,6 +26,17 @@ public class OrderServiceTest {
         customer.setId(1L);
 
         order.setCustomer(customer);
+
+        assertThrows(RuntimeException.class, () -> {
+            orderService.createOrder(order);
+        });
+    }
+
+    @Test
+    public void testMissingCustomerThrowsException() {
+
+        Order order = new Order();
+        order.setPriorityLevel(5);
 
         assertThrows(RuntimeException.class, () -> {
             orderService.createOrder(order);
