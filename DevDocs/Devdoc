@@ -1,0 +1,31 @@
+database layer, service layer, controller/api layer, repository layer, datastructure layer (BST)
+
+What needs to be done (not in order)
+
+1. Fix BST
+
+2. Fix Sorting Algo
+
+3. Build Proper Service Layer
+
+4. Finish Controller
+
+5. Set Up JPA Relationships
+
+6. Connect BST to API
+
+7. JUnit tests
+
+8. Models and any other basic requirements (dependencies etc)
+
+Tables and Relationships described in project
+
+Models and Repositories:
+
+Product, Customer, Order, Order Item
+
+Services and Controllers:
+
+Customer, Order, Product
+
+Theory Questions and Video

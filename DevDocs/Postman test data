@@ -1,0 +1,63 @@
+POST http://localhost:8080/customers
+
+{
+  "name": "John Smith",
+  "email": "john.smith@email.com"
+}
+
+{
+  "name": "Bobby Smith",
+  "email": "bobby.smith@email.com"
+}
+
+POST http://localhost:8080/products
+
+{
+  "name": "Laptop",
+  "price": 1200.00,
+  "stock": 10
+}
+
+{
+  "name": "Mouse",
+  "price": 25.99,
+  "stock": 200
+}
+
+{
+  "name": "Keyboard",
+  "price": 75.50,
+  "stock": 50
+}
+
+POST http://localhost:8080/orders
+
+{
+  "orderDate": null,
+  "priorityLevel": 7,
+  "customer": {
+    "id": 1
+  }
+}
+
+{
+  "orderDate": null,
+  "priorityLevel": 3,
+  "customer": {
+    "id": 1
+  }
+}
+
+POST http://localhost:8080/orders/add-to-priority-tree/1
+
+POST http://localhost:8080/orders/add-to-priority-tree/2
+
+GET http://localhost:8080/orders/priority/inorder
+
+GET http://localhost:8080/orders/priority/highest
+
+GET http://localhost:8080/orders/priority/lowest
+
+GET http://localhost:8080/products/sorted?by=price
+
+GET http://localhost:8080/products/sorted?by=stock

@@ -1,0 +1,25 @@
+-- Binary Search Tree --
+
+Binary Search Tree Why does an inorder traversal of a BST return sorted results? Explain in your own words.
+
+What happens to the tree if you insert values in order (1,2,3,4,5)? How does this affect performance?
+
+Where would you place duplicate priority values in your tree? Explain your choice.
+
+-- Sorting Algorithm --
+
+Explain how your sorting algorithm works step-by-step using a small example.
+
+What is the time complexity of your algorithm?
+
+When would your sorting algorithm perform well?
+
+Why is your sorting algorithm ideal or not ideal for very large datasets?
+
+-- System Design --
+
+Why might you choose to sort data in your application instead of the database?
+
+What is one advantage of using a BST in this system?
+
+What is one limitation of your current design?
